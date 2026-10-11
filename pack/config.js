@@ -10,7 +10,7 @@ window.PACK = {
   preco: '37,00',
   precoAntigo: '97,00',            // deixe '' para esconder o "de ... por"
   parcelas: 'ou em até 5x no cartão',
-  totalArtes: '40+',
+  totalArtes: '68',
 
   // Dados de quem vende, usados nos Termos e na Política de Privacidade.
   vendedor: 'Gabriel Gomes Morais',
