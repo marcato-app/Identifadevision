@@ -481,6 +481,20 @@
 
 <script src="config.js"></script>
 <script>
+  /* Pixel da Meta: registra a visita (PageView) e quem viu o pack (ViewContent).
+     Início do checkout e compra são registrados pela própria Kiwify. */
+  if (window.PACK && window.PACK.pixel) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', window.PACK.pixel);
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'Pack Vitrine Pronta', content_type: 'product', value: parseFloat(window.PACK.preco.replace(',', '.')), currency: 'BRL' });
+  }
+</script>
+<script>
   document.documentElement.classList.add('js');
 
   /* preço, textos e checkout vêm de config.js */
