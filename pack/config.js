@@ -13,10 +13,9 @@ window.PACK = {
   totalArtes: '40+',
 
   // Dados de quem vende, usados nos Termos e na Política de Privacidade.
-  vendedor: '[NOME OU RAZÃO SOCIAL]',
-  documento: '[CPF OU CNPJ]',
-  email: '[E-MAIL DE CONTATO]',
-  cidade: '[CIDADE/UF]',
+  vendedor: 'Gabriel Gomes Morais',
+  documento: 'CPF 703.446.974-10',
+  email: 'contato@marcatoapp.com.br',
 
   // Versão dos termos registrada junto com o aceite de cada cliente.
   versaoTermos: '2026-10-11'
