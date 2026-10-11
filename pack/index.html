@@ -469,7 +469,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="ano">2026</span> Identidade Vision · Produto digital. Marcas e produtos citados pertencem aos seus donos.</span>
-    <a href="../">Conheça o estúdio →</a>
+    <span class="legal"><a href="termos/">Termos de uso</a> · <a href="privacidade/">Privacidade</a> · <a href="../">Estúdio</a></span>
   </div>
 </footer>
 
@@ -478,17 +478,12 @@
   <a class="btn" data-checkout href="#">Quero meu pack</a>
 </div>
 
+<script src="config.js"></script>
 <script>
   document.documentElement.classList.add('js');
 
-  /* ===== CONFIGURE AQUI ===== */
-  const CONFIG = {
-    checkout: '#oferta',        // cole o link do checkout (Kiwify, Hotmart, Eduzz...)
-    preco: '37,00',
-    precoAntigo: '97,00',       // deixe '' para esconder o "de ... por"
-    parcelas: 'ou em até 5x no cartão',
-    totalArtes: '40+'
-  };
+  /* preço, textos e checkout vêm de config.js */
+  const CONFIG = Object.assign({}, window.PACK, { checkout: 'cadastro/' });
 
   /* artes: n = arquivo artes/NN.webp (prévia pequena em artes/p/); logo 'esq' = "sua logo aqui" no canto */
   const ARTES = [

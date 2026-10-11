@@ -1,0 +1,79 @@
+/* Estilo das páginas internas do pack (cadastro, confirmação, termos e privacidade).
+   Mesmo grafite da página de vendas; verde só nas ações. */
+:root{
+  --fundo:#09090B;
+  --fundo-2:#111114;
+  --cartao:#16161A;
+  --linha:#26262C;
+  --texto:#F4F4F6;
+  --suave:#A1A1AA;
+  --apagado:#71717A;
+  --violeta:#6C3CE9;
+  --violeta-luz:#9B7BFF;
+  --verde:#17D9A0;
+  --erro:#F87171;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--fundo);color:var(--texto);-webkit-font-smoothing:antialiased;min-height:100vh;}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em;text-wrap:balance;}
+p{margin:0;}
+a{color:inherit;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:2px solid var(--verde);outline-offset:3px;}
+::selection{background:var(--violeta);color:#fff;}
+[hidden]{display:none!important;}
+
+.topo{border-bottom:1px solid var(--linha);}
+.topo-inner{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.marca{display:flex;align-items:center;gap:9px;font-family:'Quicksand','Inter',sans-serif;font-weight:700;font-size:16px;text-decoration:none;}
+.voltar{font-size:14px;color:var(--suave);text-decoration:none;}
+.voltar:hover{color:var(--texto);}
+.seguro{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--suave);}
+.seguro svg{width:15px;height:15px;stroke:var(--verde);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--verde);color:#04140F;font:inherit;font-weight:700;font-size:16px;padding:17px 30px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 0 0 1px rgba(23,217,160,.4),0 12px 34px rgba(23,217,160,.2);transition:transform .2s ease,opacity .2s;}
+.btn:hover{transform:translateY(-2px);}
+.btn:disabled{opacity:.6;cursor:progress;transform:none;}
+.btn svg{width:18px;height:18px;stroke:currentColor;}
+.btn-bloco{width:100%;}
+
+.rotulo{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--suave);}
+.rotulo i{width:6px;height:6px;border-radius:50%;background:var(--verde);box-shadow:0 0 12px var(--verde);}
+
+/* formulário */
+.campo{display:grid;gap:7px;}
+.campo label{font-size:14px;font-weight:600;}
+.campo input{width:100%;font:inherit;font-size:16px;padding:14px 16px;border:1px solid var(--linha);border-radius:12px;background:var(--fundo);color:var(--texto);outline:none;transition:border-color .2s,box-shadow .2s;}
+.campo input::placeholder{color:var(--apagado);}
+.campo input:focus{border-color:var(--violeta-luz);box-shadow:0 0 0 4px rgba(108,60,233,.2);}
+.campo.invalido input{border-color:var(--erro);}
+.campo .msg{font-size:13px;color:var(--erro);min-height:0;}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:var(--suave);cursor:pointer;}
+.check input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--verde);cursor:pointer;}
+.check a{color:var(--texto);text-underline-offset:3px;}
+.check.invalido{color:var(--erro);}
+.aviso-erro{border:1px solid rgba(248,113,113,.4);background:rgba(248,113,113,.08);color:#fecaca;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;}
+
+/* documentos legais */
+.doc{max-width:760px;margin:0 auto;padding:48px 20px 80px;}
+.doc h1{font-size:clamp(30px,5vw,44px);line-height:1.05;margin:14px 0 8px;}
+.doc .atualizado{color:var(--apagado);font-size:14px;margin-bottom:36px;}
+.doc h2{font-size:20px;margin:36px 0 12px;letter-spacing:-.02em;}
+.doc p,.doc li{font-size:16px;line-height:1.7;color:var(--suave);}
+.doc p + p{margin-top:12px;}
+.doc ul{padding-left:20px;margin:10px 0;}
+.doc li + li{margin-top:6px;}
+.doc strong{color:var(--texto);font-weight:600;}
+.doc .indice{border:1px solid var(--linha);border-radius:16px;padding:18px 22px;background:var(--fundo-2);}
+.doc .indice ol{margin:0;padding-left:20px;columns:2;column-gap:28px;}
+.doc .indice a{color:var(--suave);text-decoration:none;font-size:14.5px;line-height:1.9;}
+.doc .indice a:hover{color:var(--texto);}
+
+footer{border-top:1px solid var(--linha);padding:24px 0;font-size:13.5px;color:var(--apagado);}
+footer .wrap{max-width:1040px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;}
+footer a{color:var(--suave);text-decoration:none;}
+
+@media (max-width:560px){
+  .doc .indice ol{columns:1;}
+}
