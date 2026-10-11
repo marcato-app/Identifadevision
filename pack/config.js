@@ -2,12 +2,11 @@
    CONFIGURAÇÃO DO PACK — é o único arquivo que você precisa editar
    ============================================================ */
 window.PACK = {
-  // URL do Apps Script publicado como app da Web (termina em /exec).
-  // Veja o passo a passo em pack-backend/LEIAME.md
-  api: '',
+  // Link do checkout da Kiwify (Produtos > seu produto > Links > Checkout).
+  checkout: '',
 
-  // Preço exibido nas páginas. O valor cobrado de verdade fica no
-  // Apps Script (propriedade PRECO); mantenha os dois iguais.
+  // Preço exibido na página. O valor cobrado é o configurado na Kiwify;
+  // mantenha os dois iguais.
   preco: '37,00',
   precoAntigo: '97,00',            // deixe '' para esconder o "de ... por"
   parcelas: 'ou em até 5x no cartão',

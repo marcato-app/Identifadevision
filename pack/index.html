@@ -429,7 +429,7 @@
             <li><span>Pagamento único, sem mensalidade</span></li>
           </ul>
           <a class="btn btn-bloco" data-checkout href="#">Quero meu pack agora</a>
-          <div class="pagamentos"><span>Pix</span><span>·</span><span>Cartão</span><span>·</span><span>Boleto</span><span>·</span><span>Pagamento seguro</span></div>
+          <div class="pagamentos"><span>Pix</span><span>·</span><span>Cartão</span><span>·</span><span>Apple Pay</span><span>·</span><span>Checkout seguro Kiwify</span></div>
         </div>
       </div>
       <div class="garantia reveal">
@@ -451,8 +451,9 @@
         <details><summary>Nunca mexi no Canva. Vou conseguir?</summary><p>Vai. Você toca em "sua logo aqui", troca pela sua logo e muda o site no rodapé. O resto da arte já está pronto.</p></details>
         <details><summary>Quais produtos têm arte?</summary><p>iPhone (incluindo os lançamentos de 2026 e todas as cores), MacBook, Mac mini, Apple Watch e AirPods, além de uma arte explicando como comprar na sua loja.</p></details>
         <details><summary>As artes vêm com essa marca d'água?</summary><p>Não. A marca d'água é só nas prévias desta página. No pack, as artes vêm limpas, em alta qualidade.</p></details>
-        <details><summary>Como recebo o pack?</summary><p>Pelo e-mail usado na compra, logo depois que o pagamento é aprovado. No cartão e no Pix a liberação é imediata; no boleto, assim que ele compensar.</p></details>
-        <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Pede o reembolso pela plataforma e recebe o valor de volta, sem burocracia.</p></details>
+        <details><summary>Como recebo o pack?</summary><p>Pelo e-mail usado na compra, logo depois que o pagamento é aprovado. No Pix, no cartão e no Apple Pay a liberação é imediata.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary><p>Pix, cartão de crédito (com parcelamento) e Apple Pay, no checkout seguro da Kiwify.</p></details>
+        <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Pede o reembolso pela Kiwify e recebe o valor de volta, sem burocracia.</p></details>
       </div>
     </div>
   </section>
@@ -483,7 +484,7 @@
   document.documentElement.classList.add('js');
 
   /* preço, textos e checkout vêm de config.js */
-  const CONFIG = Object.assign({}, window.PACK, { checkout: 'cadastro/' });
+  const CONFIG = Object.assign({}, window.PACK, { checkout: window.PACK.checkout || '#oferta' });
 
   /* artes: n = arquivo artes/NN.webp (prévia pequena em artes/p/); logo 'esq' = "sua logo aqui" no canto */
   const ARTES = [

@@ -1,4 +1,4 @@
-/* Estilo das páginas internas do pack (cadastro, confirmação, termos e privacidade).
+/* Estilo das páginas internas do pack (termos e privacidade).
    Mesmo grafite da página de vendas; verde só nas ações. */
 :root{
   --fundo:#09090B;
@@ -29,31 +29,10 @@ img{display:block;max-width:100%;}
 .marca{display:flex;align-items:center;gap:9px;font-family:'Quicksand','Inter',sans-serif;font-weight:700;font-size:16px;text-decoration:none;}
 .voltar{font-size:14px;color:var(--suave);text-decoration:none;}
 .voltar:hover{color:var(--texto);}
-.seguro{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--suave);}
-.seguro svg{width:15px;height:15px;stroke:var(--verde);}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--verde);color:#04140F;font:inherit;font-weight:700;font-size:16px;padding:17px 30px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 0 0 1px rgba(23,217,160,.4),0 12px 34px rgba(23,217,160,.2);transition:transform .2s ease,opacity .2s;}
-.btn:hover{transform:translateY(-2px);}
-.btn:disabled{opacity:.6;cursor:progress;transform:none;}
-.btn svg{width:18px;height:18px;stroke:currentColor;}
-.btn-bloco{width:100%;}
 
 .rotulo{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--suave);}
 .rotulo i{width:6px;height:6px;border-radius:50%;background:var(--verde);box-shadow:0 0 12px var(--verde);}
-
-/* formulário */
-.campo{display:grid;gap:7px;}
-.campo label{font-size:14px;font-weight:600;}
-.campo input{width:100%;font:inherit;font-size:16px;padding:14px 16px;border:1px solid var(--linha);border-radius:12px;background:var(--fundo);color:var(--texto);outline:none;transition:border-color .2s,box-shadow .2s;}
-.campo input::placeholder{color:var(--apagado);}
-.campo input:focus{border-color:var(--violeta-luz);box-shadow:0 0 0 4px rgba(108,60,233,.2);}
-.campo.invalido input{border-color:var(--erro);}
-.campo .msg{font-size:13px;color:var(--erro);min-height:0;}
-.check{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5;color:var(--suave);cursor:pointer;}
-.check input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--verde);cursor:pointer;}
-.check a{color:var(--texto);text-underline-offset:3px;}
-.check.invalido{color:var(--erro);}
-.aviso-erro{border:1px solid rgba(248,113,113,.4);background:rgba(248,113,113,.08);color:#fecaca;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;}
 
 /* documentos legais */
 .doc{max-width:760px;margin:0 auto;padding:48px 20px 80px;}
