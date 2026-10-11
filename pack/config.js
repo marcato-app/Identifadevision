@@ -6,7 +6,7 @@ window.PACK = {
   checkout: 'https://pay.kiwify.com.br/pctk6bH',
 
   // ID do Pixel da Meta (Gerenciador de Eventos). Deixe '' para desligar.
-  pixel: '261184839350576',
+  pixel: '266184839350576',
 
   // Preço exibido na página. O valor cobrado é o configurado na Kiwify;
   // mantenha os dois iguais.
