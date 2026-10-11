@@ -3,7 +3,7 @@
    ============================================================ */
 window.PACK = {
   // Link do checkout da Kiwify (Produtos > seu produto > Links > Checkout).
-  checkout: '',
+  checkout: 'https://pay.kiwify.com.br/pctk6bH',
 
   // Preço exibido na página. O valor cobrado é o configurado na Kiwify;
   // mantenha os dois iguais.
